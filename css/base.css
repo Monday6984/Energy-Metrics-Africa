@@ -64,7 +64,7 @@ button {
   width: 100%;
   max-width: var(--max-w);
   margin-inline: auto;
-  padding-inline: var(--s-px);
+  /* padding-inline: var(--s-px); */
 }
 
 /* ── SECTIONS ──────────────────────────────────────────── */

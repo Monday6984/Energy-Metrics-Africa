@@ -460,8 +460,8 @@
   background: linear-gradient(90deg, var(--gold), var(--blue-glow));
 }
 .leader-avatar {
-  width: 160px;
-  height: 260px;
+  width: 360px;
+  height: 360px;
   border-radius: var(--r-xl);
   flex-shrink: 0;
   border: 2px solid rgba(245, 166, 35, 0.28);
