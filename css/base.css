@@ -64,7 +64,7 @@ button {
   width: 100%;
   max-width: var(--max-w);
   margin-inline: auto;
-  /* padding-inline: var(--s-px); */
+  padding-inline: 0;
 }
 
 /* ── SECTIONS ──────────────────────────────────────────── */
@@ -632,24 +632,29 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .chip {
-  background: var(--navy-2);
+  /* background: var(--navy-2); */
   border: 1px solid rgba(27, 79, 138, 0.28);
-  border-radius: var(--r-full);
-  padding: 8px 18px;
-  font-family: var(--font-ui);
-  font-weight: 700;
-  font-size: 12px;
-  color: var(--muted-2);
-  transition: var(--t);
+  /* border-radius: var(--r-full); */
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: default;
+  transition: var(--t);
+}
+.chip img {
+  display: block;
+  height: 28px;
+  width: auto;
+  object-fit: contain;
 }
 .chip:hover {
   border-color: rgba(245, 166, 35, 0.4);
-  color: var(--gold);
 }
 
 /* ── CTA SECTION ───────────────────────────────────────── */
