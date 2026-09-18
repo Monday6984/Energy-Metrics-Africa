@@ -221,6 +221,14 @@
   display: grid;
   gap: 36px;
 }
+@media (max-width: 899px) {
+  .sd-diagnosis__media {
+    order: 2;
+  }
+  .sd-diagnosis__content {
+    order: 1;
+  }
+}
 @media (min-width: 900px) {
   .sd-diagnosis {
     grid-template-columns: 0.85fr 1fr;
@@ -736,7 +744,7 @@
 .sd-card-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin: 28px 0 36px;
 }
 @media (min-width: 640px) {
@@ -962,7 +970,7 @@
 
 /* ── SHARED: 3-UP VARIANTS (6-item content grids) ─────────── */
 .sd-card-grid--3 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 @media (min-width: 1024px) {
   .sd-card-grid--3 {
@@ -972,5 +980,244 @@
 @media (min-width: 1024px) {
   .sd-diff-grid--3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── SHARED: "GET STARTED" ACTION CTA WITH CONNECTED TIMELINE ── */
+/* Used by the Commercial, Energy Audit, and Community Mini-Grid
+   detail pages' final CTA. Kept separate from the older .sd-cta*
+   (2-column icon-points layout) still used by the Off-Grid page,
+   so that one is unaffected. Class prefix (mg-) is historical,
+   from when this was built mini-grid-specific first. */
+.mg-cta {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  padding: var(--s-py) var(--s-px);
+  text-align: center;
+}
+.mg-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 65% 55% at 28% 15%,
+    rgba(27, 79, 138, 0.18) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.mg-cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.mg-cta__bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+  opacity: 0.3;
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 45%,
+    transparent 82%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 45%,
+    transparent 82%
+  );
+}
+.mg-cta__inner {
+  position: relative;
+  z-index: 2;
+}
+.mg-cta__intro {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ── Connected five-step timeline ──────────────────────────── */
+.mg-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1120px;
+  margin: 56px auto 44px;
+}
+.mg-timeline__line {
+  position: absolute;
+  top: 24px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 166, 35, 0.4),
+    rgba(74, 158, 240, 0.4)
+  );
+  z-index: 0;
+}
+.mg-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 6px;
+}
+.mg-step__num {
+  position: relative;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(245, 166, 35, 0.4);
+  background: var(--navy);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 20px;
+  transition: var(--t);
+}
+.mg-step:hover .mg-step__num {
+  border-color: var(--gold);
+  background: rgba(245, 166, 35, 0.14);
+  transform: translateY(-2px);
+}
+.mg-step__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mg-step__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--blue-glow);
+  margin-bottom: 14px;
+  transition: var(--t);
+}
+.mg-step__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.mg-step:hover .mg-step__icon {
+  color: var(--gold-light);
+}
+.mg-step__title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--white);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  transition: var(--t);
+}
+.mg-step:hover .mg-step__title {
+  color: var(--gold-light);
+}
+.mg-step__text {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 190px;
+}
+@media (max-width: 899px) {
+  .mg-timeline {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 420px;
+  }
+  .mg-timeline__line {
+    top: 0;
+    bottom: 0;
+    left: 23px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(245, 166, 35, 0.4),
+      rgba(74, 158, 240, 0.4)
+    );
+  }
+  .mg-step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 18px;
+    padding: 0;
+  }
+  .mg-step__num {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .mg-step__body {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .mg-step__text {
+    max-width: none;
+  }
+}
+
+/* ── Action + trust row ─────────────────────────────────────── */
+.mg-cta__action {
+  margin-bottom: 32px;
+}
+.mg-cta__micro {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.mg-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mg-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+.mg-trust__item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--blue-glow);
+  flex-shrink: 0;
+}
+.mg-trust__divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 640px) {
+  .mg-trust__divider {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .mg-cta__bg-img {
+    width: 100%;
+    opacity: 0.14;
   }
 }
