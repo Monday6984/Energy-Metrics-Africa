@@ -1,13 +1,223 @@
 /* ── ABOUT PAGE — DARK THEME ───────────────────────────── */
+
+/* ── HERO (image emerges from right — same technique/structure as
+   .svc-hero on the services listing page and .sd-hero on the service
+   detail pages) ─────────────────────────────────────────── */
+.about-hero {
+  position: relative;
+  background: var(--navy);
+  overflow: hidden;
+  padding-top: 66px;
+  min-height: 560px;
+}
+@media (min-width: 768px) {
+  .about-hero {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .about-hero {
+    min-height: clamp(650px, 78vh, 750px);
+  }
+}
+.about-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 75% 30%,
+      rgba(27, 79, 138, 0.22) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 50% at 10% 85%,
+      rgba(245, 166, 35, 0.07) 0%,
+      transparent 50%
+    );
+}
+.about-hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(27, 79, 138, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 79, 138, 0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(
+    ellipse 85% 85% at 40% 40%,
+    black 20%,
+    transparent 100%
+  );
+}
+.about-hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  /* max-width: var(--max-w); */
+  margin-inline: auto;
+  padding: 44px var(--s-px) 48px;
+}
+@media (min-width: 1024px) {
+  .about-hero__inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+.about-hero__content {
+  max-width: 600px;
+  min-width: 0;
+}
+@media (min-width: 768px) {
+  .about-hero__content {
+    /* max-width: 54%; */
+  }
+}
+@media (min-width: 1024px) {
+  .about-hero__content {
+    max-width: 660px;
+  }
+}
+.about-hero__content .page-hero__title {
+  margin-bottom: 16px;
+}
+.about-hero__content .page-hero__sub {
+  margin-bottom: 26px;
+}
+.about-hero__content .btn-group {
+  margin-bottom: 30px;
+}
+.about-hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--off-white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  padding-bottom: 3px;
+  transition: var(--t);
+}
+.about-hero__link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.about-hero__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.about-hero__point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--muted-2);
+}
+.about-hero__point svg {
+  width: 18px;
+  height: 18px;
+  color: var(--blue-glow);
+  flex-shrink: 0;
+}
+.about-hero__photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  margin-top: 28px;
+  mask-image: radial-gradient(
+    ellipse 65% 75% at 68% 40%,
+    #000 0%,
+    #000 38%,
+    rgba(0, 0, 0, 0.65) 58%,
+    rgba(0, 0, 0, 0.15) 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 65% 75% at 68% 40%,
+    #000 0%,
+    #000 38%,
+    rgba(0, 0, 0, 0.65) 58%,
+    rgba(0, 0, 0, 0.15) 85%,
+    transparent 100%
+  );
+}
+@media (min-width: 768px) {
+  .about-hero__photo {
+    position: absolute;
+    inset: 0 0 0 auto;
+    margin-top: 0;
+    width: 46%;
+    aspect-ratio: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .about-hero__photo {
+    width: 50%;
+  }
+}
+.about-hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 28%;
+}
+
+/* ── SECTION BACKGROUND (Nigeria night-lights + power grid) ── */
+.nps-section {
+  position: relative;
+  overflow: hidden;
+}
+.nps-section__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.nps-section__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.6;
+}
+.nps-section__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--navy) 0%,
+    var(--navy) 28%,
+    rgba(5, 13, 26, 0.7) 55%,
+    rgba(5, 13, 26, 0.35) 100%
+  );
+}
+@media (max-width: 767px) {
+  .nps-section__bg-img {
+    opacity: 0.25;
+  }
+  .nps-section__bg::after {
+    background: rgba(5, 13, 26, 0.55);
+  }
+}
 .nps-intro-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 40px;
   margin-bottom: 56px;
 }
 @media (min-width: 1024px) {
   .nps-intro-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 56px;
     align-items: start;
   }
 }
@@ -20,6 +230,112 @@
 .nps-intro-text p strong {
   color: var(--off-white);
   font-weight: 500;
+}
+.nps-highlight {
+  border-left: 3px solid var(--gold);
+  padding-left: 18px;
+  margin-top: 28px;
+}
+.nps-highlight p {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--white);
+  line-height: 1.4;
+}
+.nps-highlight p strong {
+  color: var(--gold);
+}
+
+/* ── POWER GAP PANEL ────────────────────────────────────── */
+.power-gap {
+  background: rgba(10, 22, 40, 0.55);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-2xl);
+  padding: 32px;
+  backdrop-filter: blur(3px);
+}
+.power-gap__head {
+  margin-bottom: 22px;
+}
+.power-gap__sub {
+  font-size: 14px;
+  color: var(--muted-2);
+  margin-top: 8px;
+}
+.power-gap__list {
+  display: flex;
+  flex-direction: column;
+}
+.power-gap__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.power-gap__list .power-gap__row:last-child {
+  border-bottom: none;
+  padding-bottom: 6px;
+}
+.power-gap__num {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(74, 158, 240, 0.4);
+  color: var(--blue-glow);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.power-gap__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 6px;
+  color: var(--muted-2);
+}
+.power-gap__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.power-gap__title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.power-gap__text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.power-gap__approach {
+  margin-top: 22px;
+  background: rgba(5, 13, 26, 0.6);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+}
+.power-gap__approach-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.power-gap__approach-text {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.4;
 }
 
 .crisis-card {

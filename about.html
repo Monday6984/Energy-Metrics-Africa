@@ -82,7 +82,8 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 aria-hidden="true"
-              ><path d="m6 9 6 6 6-6" /></svg
+              >
+                <path d="m6 9 6 6 6-6" /></svg
             ></a>
             <div class="nav__dropdown">
               <a
@@ -151,9 +152,7 @@
           href="/services/community-mini-grid-development/"
           class="nav__drawer-sublink"
           >Community Mini-Grid Development</a
-        ><a
-          href="/services/energy-audit-analytics/"
-          class="nav__drawer-sublink"
+        ><a href="/services/energy-audit-analytics/" class="nav__drawer-sublink"
           >Energy Audit &amp; Analytics</a
         ><a href="/projects" class="nav__drawer-link" data-nav="/projects"
           >Projects</a
@@ -163,155 +162,278 @@
       </div>
     </header>
     <main>
-      <div class="page-hero">
-        <div class="page-hero__bg" aria-hidden="true"></div>
-        <div class="page-hero__grid" aria-hidden="true"></div>
-        <div class="page-hero__inner">
-          <div class="page-hero__eyebrow">About Energy Metrics Africa</div>
-          <h1 class="page-hero__title">
-            Born from a <span class="grad-text">Perennial Problem.</span
-            ><br />Built for Permanent Change.
-          </h1>
-          <p class="page-hero__sub">
-            An indigenous Nigerian company that emerged from over 60 years of
-            Nigeria's unresolved power crisis — armed with engineering
-            expertise, data intelligence, and a conviction that the answer lies
-            in renewable energy integration across the full value chain.
-          </p>
+      <section class="about-hero" aria-label="About Energy Metrics Africa">
+        <div class="about-hero__bg" aria-hidden="true"></div>
+        <div class="about-hero__grid-bg" aria-hidden="true"></div>
+        <div class="about-hero__inner">
+          <div class="about-hero__content">
+            <div class="eyebrow">About Energy Metrics Africa</div>
+            <h1 class="page-hero__title">
+              Born from a
+              <span class="grad-text">Perennial</span> Problem.<br />
+              Built for Permanent <span class="grad-text">Change.</span>
+            </h1>
+            <p class="page-hero__sub">
+              An indigenous Nigerian company that emerged from over 60 years of
+              Nigeria's unresolved power crisis — armed with engineering
+              expertise, data intelligence, and a conviction that the answer
+              lies in renewable energy integration across the full value chain.
+            </p>
+            <div class="btn-group">
+              <a href="/contact" class="btn btn--gold"
+                >Partner With Us &rarr;</a
+              >
+              <a href="#story" class="about-hero__link"
+                >Discover Our Story &rarr;</a
+              >
+            </div>
+            <div class="about-hero__points">
+              <div class="about-hero__point">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 4c-7.5 0-15 3-15 13 0 2.5 2 4 4.5 4C19 21 21 13 21 5c0-.6-.1-1-1-1z"
+                  />
+                  <path d="M6 21c2-5 7-10 13-14" />
+                </svg>
+                <span>Renewable Integration</span>
+              </div>
+              <div class="about-hero__point">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 20V11" />
+                  <path d="M12 20V4" />
+                  <path d="M20 20v-6" />
+                </svg>
+                <span>Data-Driven Engineering</span>
+              </div>
+              <div class="about-hero__point">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 3.5 5 6.3v5.4c0 5 3.1 8 7 9.3 3.9-1.3 7-4.3 7-9.3V6.3L12 3.5z"
+                  />
+                </svg>
+                <span>Built for Nigerian Realities</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="about-hero__photo" aria-hidden="true">
+          <img
+            src="assets/We build to IEC 60364.png"
+            alt=""
+            class="about-hero__img"
+            loading="eager"
+          />
+        </div>
+      </section>
 
       <!-- NIGERIA POWER SECTOR HISTORY -->
       <section
+        id="story"
         class="section section--navy"
         aria-label="Nigeria power sector history"
       >
         <div class="container">
-          <div class="nps-intro-grid">
+          <div class="nps-section">
+            <div class="nps-section__bg" aria-hidden="true">
+              <img
+                src="assets/Nigeria Night Lights and Power Grid.png"
+                alt=""
+                class="nps-section__bg-img"
+              />
+            </div>
+            <div class="nps-intro-grid">
             <div class="reveal">
-              <div class="eyebrow">The Problem We Were Born To Solve</div>
+              <div class="eyebrow">The Problem We Inherited</div>
               <h2 class="section-title">
                 Nigeria's Power Sector:
-                <span class="grad-dark">A 60-Year Story</span>
+                <span class="grad-text">A 60-Year Story</span>
               </h2>
               <div class="nps-intro-text">
                 <p>
-                  Nigeria's electricity crisis is not a new problem. It is a
-                  decades-long structural failure that has defined how every
-                  Nigerian home, every business, and every community experiences
-                  daily life. Understanding this history is essential to
-                  understanding why
-                  <strong>Energy Metrics Africa exists</strong> — and why the
-                  renewable energy value chain is the only credible path
-                  forward.
+                  For over six decades, Nigeria's power sector has struggled
+                  to deliver reliable, affordable and sustainable
+                  electricity. Despite vast resources and repeated reforms,
+                  millions of people and businesses still face unreliable
+                  supply, high energy costs and heavy dependence on diesel
+                  generators.
                 </p>
                 <p>
-                  From the colonial era to the present day, Nigeria's power
-                  sector has been characterised by a persistent and widening gap
-                  between what the nation needs, what has been promised, and
-                  what has actually been delivered.
-                  <strong
-                    >Energy Metrics Africa was born from this
-                    frustration</strong
-                  >
-                  — and built to be part of the solution, through on-grid,
-                  off-grid, and mini-grid renewable energy integration.
+                  This has constrained economic growth, limited industrial
+                  competitiveness and affected the quality of life for
+                  households across the country.
+                </p>
+              </div>
+              <div class="nps-highlight">
+                <p>
+                  This is the problem
+                  <strong>Energy Metrics Africa</strong> was built to solve.
                 </p>
               </div>
             </div>
             <div class="reveal d2">
-              <div class="crisis-card">
-                <div class="crisis-label">Where We Are Today</div>
-                <h3 class="crisis-title">
-                  Africa's Largest Energy Access Deficit
-                </h3>
-                <div class="crisis-stats">
-                  <div class="cs">
-                    <span class="cs__val">85M+</span>
-                    <p class="cs__label">
-                      Nigerians without grid electricity — 43% of the population
-                    </p>
+              <div class="power-gap">
+                <div class="power-gap__head">
+                  <div class="eyebrow">The Power Gap</div>
+                  <p class="power-gap__sub">
+                    Key challenges holding Nigeria back
+                  </p>
+                </div>
+                <div class="power-gap__list">
+                  <div class="power-gap__row">
+                    <div class="power-gap__num">01</div>
+                    <div class="power-gap__icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M12 3 5 21" />
+                        <path d="M12 3l7 18" />
+                        <path d="M7.5 14.5h9" />
+                        <path d="M9.3 9.5h5.4" />
+                      </svg>
+                    </div>
+                    <div class="power-gap__body">
+                      <h3 class="power-gap__title">
+                        Unreliable grid supply
+                      </h3>
+                      <p class="power-gap__text">
+                        Frequent outages and low generation capacity make
+                        the grid unpredictable.
+                      </p>
+                    </div>
                   </div>
-                  <div class="cs">
-                    <span class="cs__val">~5,000MW</span>
-                    <p class="cs__label">
-                      Actual daily generation vs. 13,000MW installed capacity
-                    </p>
+                  <div class="power-gap__row">
+                    <div class="power-gap__num">02</div>
+                    <div class="power-gap__icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <ellipse cx="12" cy="6.5" rx="5.5" ry="2.2" />
+                        <path
+                          d="M6.5 6.5v11c0 1.2 2.5 2.2 5.5 2.2s5.5-1 5.5-2.2v-11"
+                        />
+                        <path d="M6.5 12c0 1.2 2.5 2.2 5.5 2.2s5.5-1 5.5-2.2" />
+                      </svg>
+                    </div>
+                    <div class="power-gap__body">
+                      <h3 class="power-gap__title">
+                        High dependence on diesel
+                      </h3>
+                      <p class="power-gap__text">
+                        Businesses and households rely on expensive
+                        generators to meet their energy needs.
+                      </p>
+                    </div>
                   </div>
-                  <div class="cs">
-                    <span class="cs__val">$22B+</span>
-                    <p class="cs__label">
-                      Spent annually on diesel generators by businesses and
-                      households
-                    </p>
+                  <div class="power-gap__row">
+                    <div class="power-gap__num">03</div>
+                    <div class="power-gap__icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M3 17l6-6 4 4 8-8" />
+                        <path d="M16 6h5v5" />
+                      </svg>
+                    </div>
+                    <div class="power-gap__body">
+                      <h3 class="power-gap__title">
+                        Rising operating costs
+                      </h3>
+                      <p class="power-gap__text">
+                        High energy costs reduce competitiveness and limit
+                        business growth.
+                      </p>
+                    </div>
                   </div>
-                  <div class="cs">
-                    <span class="cs__val">27%</span>
-                    <p class="cs__label">
-                      Rural electrification rate — only 1 in 4 rural Nigerians
-                      has power
-                    </p>
+                  <div class="power-gap__row">
+                    <div class="power-gap__num">04</div>
+                    <div class="power-gap__icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="9" cy="8" r="3" />
+                        <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+                        <circle cx="17" cy="9" r="2.4" />
+                        <path d="M15.5 13.2c2.6.3 4.5 2.4 4.5 5" />
+                      </svg>
+                    </div>
+                    <div class="power-gap__body">
+                      <h3 class="power-gap__title">
+                        Lost productivity and opportunity
+                      </h3>
+                      <p class="power-gap__text">
+                        Unreliable power affects education, healthcare,
+                        industries and livelihoods.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <p>
-                  Nigeria generates approximately 5,000MW for a population of
-                  220 million people. Over 10,000MW of installed capacity sits
-                  stranded due to gas shortages and transmission bottlenecks.
-                  The economic cost of outages reaches
-                  <strong>$26 billion annually.</strong>
-                </p>
-              </div>
-              <div class="future-card">
-                <div class="future-label">Where We Should Be</div>
-                <h3 class="future-title">The Renewable Energy Opportunity</h3>
-                <p>
-                  Nigeria's Energy Commission projects demand of
-                  <strong>100,000MW+ by 2030</strong>. The fastest path is
-                  distributed solar, mini-grids, and smart off-grid systems —
-                  not waiting for grid extension to reach 85 million unserved
-                  Nigerians.
-                </p>
-                <div class="future-points">
-                  <div class="fp">
-                    <div class="fp__dot">&#10003;</div>
-                    <span
-                      >Universal electricity access by 2030 — Nigeria's stated
-                      ambition under the Electricity Act 2023</span
-                    >
+                <div class="power-gap__approach">
+                  <div class="power-gap__approach-label">
+                    A Different Approach
                   </div>
-                  <div class="fp">
-                    <div class="fp__dot">&#10003;</div>
-                    <span
-                      >60% of unconnected Nigerians best served by off-grid or
-                      mini-grid solar, not grid extension</span
-                    >
-                  </div>
-                  <div class="fp">
-                    <div class="fp__dot">&#10003;</div>
-                    <span
-                      >REA has identified 10,000+ viable mini-grid sites across
-                      Nigeria — mostly in the North</span
-                    >
-                  </div>
-                  <div class="fp">
-                    <div class="fp__dot">&#10003;</div>
-                    <span
-                      >World Bank DARES programme: $750M specifically for
-                      distributed renewable energy in Nigeria</span
-                    >
-                  </div>
-                  <div class="fp">
-                    <div class="fp__dot">&#10003;</div>
-                    <span
-                      >Electricity Act 2023 decentralises the market, enabling
-                      state-level renewable investment at scale</span
-                    >
-                  </div>
+                  <p class="power-gap__approach-text">
+                    A more reliable, inclusive and sustainable energy future
+                    is possible.
+                  </p>
                 </div>
               </div>
             </div>
+            </div>
           </div>
+        </div>
+      </section>
 
+      <!-- COMPANY HISTORY TIMELINE -->
+      <section
+        id="history"
+        class="section section--navy-2"
+        aria-label="Company history timeline"
+      >
+        <div class="container">
           <div class="reveal" style="margin-bottom: 32px">
             <div class="eyebrow">A Brief History</div>
             <h2 class="section-title">
