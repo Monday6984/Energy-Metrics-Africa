@@ -52,6 +52,59 @@ if (hamburger && drawer) {
   });
 }
 
+// Hero slider (home page only)
+const heroSlider = document.getElementById("heroSlider");
+if (heroSlider) {
+  const slides = Array.from(heroSlider.querySelectorAll(".hero-slide"));
+  const dots = Array.from(heroSlider.querySelectorAll(".hero-slider__dot"));
+  const prevBtn = document.getElementById("heroPrev");
+  const nextBtn = document.getElementById("heroNext");
+  let current = slides.findIndex((s) => s.classList.contains("is-active"));
+  if (current < 0) current = 0;
+  let autoplayId = null;
+
+  function goTo(index) {
+    const next = (index + slides.length) % slides.length;
+    if (next === current) return;
+    slides[current].classList.remove("is-active");
+    dots[current]?.classList.remove("is-active");
+    dots[current]?.setAttribute("aria-selected", "false");
+    current = next;
+    slides[current].classList.add("is-active");
+    dots[current]?.classList.add("is-active");
+    dots[current]?.setAttribute("aria-selected", "true");
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayId = setInterval(() => goTo(current + 1), 7000);
+  }
+  function stopAutoplay() {
+    if (autoplayId) clearInterval(autoplayId);
+    autoplayId = null;
+  }
+
+  prevBtn?.addEventListener("click", () => {
+    goTo(current - 1);
+    startAutoplay();
+  });
+  nextBtn?.addEventListener("click", () => {
+    goTo(current + 1);
+    startAutoplay();
+  });
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      goTo(i);
+      startAutoplay();
+    });
+  });
+
+  heroSlider.addEventListener("mouseenter", stopAutoplay);
+  heroSlider.addEventListener("mouseleave", startAutoplay);
+
+  if (slides.length > 1) startAutoplay();
+}
+
 // Scroll reveal
 const revealObs = new IntersectionObserver(
   (entries) => {
@@ -66,6 +119,34 @@ const revealObs = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
+
+// FAQ accordion (service detail pages)
+document.querySelectorAll(".faq-accordion").forEach((accordion) => {
+  const items = Array.from(accordion.querySelectorAll(".faq-item"));
+
+  function closeItem(item) {
+    item.classList.remove("is-open");
+    item.querySelector(".faq-item__q")?.setAttribute("aria-expanded", "false");
+    const panel = item.querySelector(".faq-item__panel");
+    if (panel) panel.style.maxHeight = null;
+  }
+
+  function openItem(item) {
+    item.classList.add("is-open");
+    item.querySelector(".faq-item__q")?.setAttribute("aria-expanded", "true");
+    const panel = item.querySelector(".faq-item__panel");
+    if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+
+  items.forEach((item) => {
+    const btn = item.querySelector(".faq-item__q");
+    btn?.addEventListener("click", () => {
+      const wasOpen = item.classList.contains("is-open");
+      items.forEach(closeItem);
+      if (!wasOpen) openItem(item);
+    });
+  });
+});
 
 // Contact form (contact.html only)
 const form = document.getElementById("contactForm");
