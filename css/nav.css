@@ -164,3 +164,77 @@
   font-size: 15px;
   text-decoration: none;
 }
+
+/* ── SERVICES DROPDOWN (desktop) ──────────────────────── */
+.nav__item {
+  position: relative;
+}
+.nav__caret {
+  width: 12px;
+  height: 12px;
+  margin-left: 3px;
+  vertical-align: -1px;
+  transition: transform 0.2s ease;
+}
+.nav__item--dropdown:hover .nav__caret,
+.nav__item--dropdown:focus-within .nav__caret {
+  transform: rotate(180deg);
+}
+.nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 5;
+  min-width: 260px;
+  padding: 8px;
+  background: var(--navy-2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-lg);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s;
+}
+.nav__item--dropdown:hover .nav__dropdown,
+.nav__item--dropdown:focus-within .nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.nav__dropdown-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: var(--t);
+}
+.nav__dropdown-link:hover,
+.nav__dropdown-link:focus {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── SERVICES SUB-LINKS (mobile drawer) ───────────────── */
+.nav__drawer-sublink {
+  display: block;
+  padding: 10px 18px 10px 34px;
+  border-radius: var(--r-lg);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: var(--t);
+}
+.nav__drawer-sublink:hover,
+.nav__drawer-sublink:focus {
+  color: var(--white);
+  background: rgba(27, 79, 138, 0.15);
+}

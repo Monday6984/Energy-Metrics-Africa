@@ -72,10 +72,36 @@
               >About</a
             >
           </li>
-          <li>
+          <li class="nav__item nav__item--dropdown">
             <a href="/services" class="nav__link" data-nav="/services"
-              >Services</a
-            >
+              >Services<svg
+                class="nav__caret"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              ><path d="m6 9 6 6 6-6" /></svg
+            ></a>
+            <div class="nav__dropdown">
+              <a
+                href="/services/off-grid-solar-hybrid-systems/"
+                class="nav__dropdown-link"
+                >Off-Grid Solar Hybrid Systems</a
+              >
+              <a
+                href="/services/commercial-energy-installations/"
+                class="nav__dropdown-link"
+                >Commercial Energy Installations</a
+              >
+              <a
+                href="/services/energy-audit-analytics/"
+                class="nav__dropdown-link"
+                >Energy Audit &amp; Analytics</a
+              >
+            </div>
           </li>
           <li>
             <a href="projects.html" class="nav__link" data-nav="projects.html"
@@ -111,6 +137,18 @@
         ><a href="/about" class="nav__drawer-link" data-nav="/about">About</a
         ><a href="/services" class="nav__drawer-link" data-nav="/services"
           >Services</a
+        ><a
+          href="/services/off-grid-solar-hybrid-systems/"
+          class="nav__drawer-sublink"
+          >Off-Grid Solar Hybrid Systems</a
+        ><a
+          href="/services/commercial-energy-installations/"
+          class="nav__drawer-sublink"
+          >Commercial Energy Installations</a
+        ><a
+          href="/services/energy-audit-analytics/"
+          class="nav__drawer-sublink"
+          >Energy Audit &amp; Analytics</a
         ><a href="/projects" class="nav__drawer-link" data-nav="/projects"
           >Projects</a
         ><a
