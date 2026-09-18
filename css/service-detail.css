@@ -216,17 +216,114 @@
 .sd-statement__accent {
   color: var(--gold);
 }
-.sd-diagnosis-text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 700px;
-  margin: 24px 0;
+/* ── SECTION 2 (EDITORIAL VARIANT): THE DIAGNOSIS ─────────── */
+.sd-diagnosis {
+  display: grid;
+  gap: 36px;
 }
-.sd-diagnosis-text p {
+@media (min-width: 900px) {
+  .sd-diagnosis {
+    grid-template-columns: 0.85fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+}
+.sd-diagnosis__media {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+@media (min-width: 900px) {
+  .sd-diagnosis__media {
+    aspect-ratio: 3 / 4;
+  }
+}
+.sd-diagnosis__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 13, 26, 0) 55%,
+    rgba(5, 13, 26, 0.35) 100%
+  );
+}
+.sd-diagnosis__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+.sd-diagnosis__content {
+  min-width: 0;
+  max-width: 600px;
+}
+.sd-diagnosis__content .section-title {
+  margin-bottom: 20px;
+}
+.sd-diagnosis__body {
+  font-size: 15px;
+  color: var(--muted-2);
+  line-height: 1.75;
+  max-width: 540px;
+}
+.sd-diagnosis__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.09);
+  margin: 28px 0;
+}
+.sd-diagnosis__subhead {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: clamp(19px, 2.4vw, 24px);
+  color: var(--white);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.sd-diagnosis__highlight {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: clamp(19px, 2.4vw, 24px);
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+.sd-diagnosis__support {
   font-size: 14.5px;
   color: var(--muted-2);
   line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 28px;
+}
+.sd-diagnosis__stat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+.sd-diagnosis__stat-label {
+  flex-basis: 100%;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sd-diagnosis__stat-value {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: clamp(32px, 4.2vw, 44px);
+  color: var(--gold);
+  line-height: 1;
+}
+.sd-diagnosis__stat-text {
+  font-size: 13.5px;
+  color: var(--muted-2);
+  line-height: 1.5;
+  max-width: 260px;
 }
 
 /* ── SECTION 3: DIFFERENTIATORS ────────────────────────── */
@@ -755,24 +852,71 @@
   padding: 26px 16px;
 }
 
-/* ── SHARED: CHECKLIST — SINGLE LIST VARIANT ──────────────── */
-.sd-checklist-col--single {
-  border-color: rgba(245, 166, 35, 0.3);
-}
-.sd-checklist-col--single .sd-check {
-  background: rgba(245, 166, 35, 0.12);
-  color: var(--gold);
-}
-.sd-checklist--grid {
+/* ── SHARED: "WHAT'S INCLUDED" EDITORIAL CHECKLIST ────────── */
+.sd-included {
   display: grid;
+  gap: 32px;
+}
+@media (min-width: 900px) {
+  .sd-included {
+    grid-template-columns: 300px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+}
+.sd-included__intro {
+  max-width: 360px;
+}
+.sd-included__intro .section-title {
+  margin-bottom: 16px;
+}
+.sd-included__lead {
+  font-size: 14.5px;
+  color: var(--muted-2);
+  line-height: 1.7;
+}
+.sd-included__list {
+  display: grid;
+  gap: 0 48px;
   grid-template-columns: 1fr;
-  gap: 14px;
 }
 @media (min-width: 640px) {
-  .sd-checklist--grid {
+  .sd-included__list {
     grid-template-columns: 1fr 1fr;
-    gap: 14px 32px;
   }
+}
+.sd-included__col {
+  display: flex;
+  flex-direction: column;
+}
+.sd-included__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.sd-included__col .sd-included__item:last-child {
+  border-bottom: none;
+}
+.sd-included__icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(245, 166, 35, 0.45);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+.sd-included__item p {
+  font-size: 15px;
+  color: var(--off-white);
+  line-height: 1.5;
+  padding-top: 6px;
 }
 
 /* ── SHARED: CTA NUMBERED STEPS (ACTION SECTIONS) ─────────── */
