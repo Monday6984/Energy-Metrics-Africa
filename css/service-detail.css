@@ -624,3 +624,180 @@
   color: var(--blue-glow);
   flex-shrink: 0;
 }
+
+/* ── SHARED: INFO CARD GRID (pain points / audience benefits) ── */
+.sd-card-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 28px 0 36px;
+}
+@media (min-width: 640px) {
+  .sd-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+.sd-card-item {
+  background: var(--navy-2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-lg);
+  padding: 24px 20px;
+  transition: var(--t);
+}
+.sd-card-item:hover {
+  border-color: rgba(74, 158, 240, 0.35);
+  transform: translateY(-2px);
+}
+.sd-card-item__icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 16px;
+  color: var(--gold);
+}
+.sd-card-item--positive .sd-card-item__icon {
+  color: var(--blue-glow);
+}
+.sd-card-item__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.sd-card-item__title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.sd-card-item__text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── SHARED: OLD WAY / NEW WAY COMPARISON ─────────────────── */
+.sd-compare-grid {
+  display: grid;
+  gap: 20px;
+  margin: 28px 0 36px;
+}
+@media (min-width: 768px) {
+  .sd-compare-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+.sd-compare-col {
+  border-radius: var(--r-xl);
+  padding: 28px;
+}
+.sd-compare-col--old {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--card-border);
+  opacity: 0.85;
+}
+.sd-compare-col--new {
+  background: rgba(245, 166, 35, 0.06);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+}
+.sd-compare-col__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.sd-compare-col--old .sd-compare-col__label {
+  color: var(--muted);
+}
+.sd-compare-col--new .sd-compare-col__label {
+  color: var(--gold);
+}
+.sd-compare-col__text {
+  font-size: 14px;
+  color: var(--muted-2);
+  line-height: 1.75;
+}
+.sd-compare-col--new .sd-compare-col__text {
+  color: var(--off-white);
+}
+
+/* ── SHARED: 5-UP STATS ROW (bordered cards, no dividers) ─── */
+.sd-stats-row--5 {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 24px;
+}
+@media (min-width: 640px) {
+  .sd-stats-row--5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .sd-stats-row--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.sd-stats-row--5 .stat-box {
+  border: 1px solid rgba(27, 79, 138, 0.22);
+  border-radius: var(--r-lg);
+  padding: 26px 16px;
+}
+
+/* ── SHARED: CHECKLIST — SINGLE LIST VARIANT ──────────────── */
+.sd-checklist-col--single {
+  border-color: rgba(245, 166, 35, 0.3);
+}
+.sd-checklist-col--single .sd-check {
+  background: rgba(245, 166, 35, 0.12);
+  color: var(--gold);
+}
+.sd-checklist--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media (min-width: 640px) {
+  .sd-checklist--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+  }
+}
+
+/* ── SHARED: CTA NUMBERED STEPS (ACTION SECTIONS) ─────────── */
+.sd-cta__inner--action {
+  max-width: 900px;
+}
+.sd-cta__steps {
+  display: grid;
+  gap: 24px;
+  margin: 32px 0;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .sd-cta__steps {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+}
+.sd-cta__step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(245, 166, 35, 0.12);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  color: var(--gold);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.sd-cta__step-text {
+  font-size: 13px;
+  color: var(--muted-2);
+  line-height: 1.6;
+}
