@@ -788,69 +788,6 @@
   line-height: 1.7;
 }
 
-/* Proof bar */
-.proof-bar {
-  background: linear-gradient(135deg, var(--navy-3), rgba(27, 79, 138, 0.2));
-  border: 1px solid rgba(27, 79, 138, 0.45);
-  border-radius: var(--r-xl);
-  padding: 28px 32px;
-  margin-top: 24px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.proof-bar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--blue-glow));
-}
-@media (min-width: 768px) {
-  .proof-bar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-.proof-bar__title {
-  font-family: var(--font-ui);
-  font-weight: 800;
-  font-size: 18px;
-  color: var(--white);
-  margin-bottom: 5px;
-}
-.proof-bar__sub {
-  font-size: 13px;
-  color: var(--muted);
-}
-.proof-bar__stats {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.pbs {
-  text-align: center;
-}
-.pbs__val {
-  font-family: var(--font-ui);
-  font-weight: 800;
-  font-size: 28px;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-}
-.pbs__label {
-  font-size: 10px;
-  color: var(--muted);
-  margin-top: 3px;
-  white-space: nowrap;
-}
-
 /* Proof / track record */
 .eyebrow--blue {
   color: var(--blue-glow);

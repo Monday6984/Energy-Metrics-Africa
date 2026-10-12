@@ -148,6 +148,18 @@ document.querySelectorAll(".faq-accordion").forEach((accordion) => {
   });
 });
 
+// History timeline "View details" toggles (about.html) — each milestone
+// opens independently, unlike the single-open FAQ accordion above.
+document.querySelectorAll(".htx__toggle").forEach((btn) => {
+  const panel = document.getElementById(btn.getAttribute("aria-controls"));
+  if (!panel) return;
+  btn.addEventListener("click", () => {
+    const isOpen = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!isOpen));
+    panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+  });
+});
+
 // Contact form (contact.html only)
 const form = document.getElementById("contactForm");
 const successMsg = document.getElementById("formSuccess");
