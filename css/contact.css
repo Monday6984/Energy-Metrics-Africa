@@ -233,3 +233,31 @@
   margin-top: 12px;
   font-size: 14px;
 }
+.form-error {
+  display: none;
+  text-align: center;
+  padding: 16px;
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+  border-radius: var(--r-lg);
+  color: #ff8a7a;
+  font-weight: 600;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.form-error a {
+  color: inherit;
+  text-decoration: underline;
+}
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+/* Spam trap field: kept off-screen, not display:none, so bots still fill it */
+.form-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

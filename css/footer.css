@@ -52,6 +52,10 @@
   cursor: pointer;
   transition: var(--t);
 }
+.footer__social svg {
+  width: 16px;
+  height: 16px;
+}
 .footer__social:hover {
   background: rgba(245, 166, 35, 0.1);
   border-color: rgba(245, 166, 35, 0.35);

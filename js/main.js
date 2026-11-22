@@ -163,13 +163,39 @@ document.querySelectorAll(".htx__toggle").forEach((btn) => {
 // Contact form (contact.html only)
 const form = document.getElementById("contactForm");
 const successMsg = document.getElementById("formSuccess");
-if (form && successMsg) {
-  form.addEventListener("submit", (e) => {
+const errorMsg = document.getElementById("formError");
+if (form && successMsg && errorMsg) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const btnLabel = submitBtn.innerHTML;
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    successMsg.style.display = "block";
-    form.reset();
-    setTimeout(() => {
-      successMsg.style.display = "none";
-    }, 5000);
+    successMsg.style.display = "none";
+    errorMsg.style.display = "none";
+
+    // Show the browser's own "please fill in this field" messages
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (!res.ok) throw new Error("Send failed: " + res.status);
+      form.reset();
+      successMsg.style.display = "block";
+    } catch (err) {
+      errorMsg.style.display = "block";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = btnLabel;
+    }
   });
 }

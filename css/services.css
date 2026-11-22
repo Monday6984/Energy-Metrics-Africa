@@ -289,32 +289,3 @@
 .svc-cta__main {
   min-width: 0;
 }
-.svc-cta__points {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-@media (min-width: 900px) {
-  .svc-cta__points {
-    padding-top: 0;
-    padding-left: 40px;
-    border-top: none;
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
-  }
-}
-.svc-cta__point {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--off-white);
-}
-.svc-cta__point svg {
-  width: 20px;
-  height: 20px;
-  color: var(--gold);
-  flex-shrink: 0;
-}
