@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Free energy assessment: enter your power costs and appliances to see your daily load, the solar system that fits it, and how long it takes to pay for itself."
+    />
+    <meta name="author" content="Energy Metrics Africa Limited" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://energymetricsafrica.com/energy-audit/" />
+    <meta property="og:title" content="Free Energy Assessment | Energy Metrics Africa" />
+    <meta
+      property="og:description"
+      content="Free energy assessment: enter your power costs and appliances to see your daily load, the solar system that fits it, and how long it takes to pay for itself."
+    />
+    <meta
+      property="og:image"
+      content="https://energymetricsafrica.com/assets/logo-white.png"
+    />
+    <meta
+      property="og:url"
+      content="https://energymetricsafrica.com/energy-audit/"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Energy Assessment | Energy Metrics Africa" />
+    <meta
+      name="twitter:description"
+      content="Free energy assessment: enter your power costs and appliances to see your daily load, the solar system that fits it, and how long it takes to pay for itself."
+    />
+    <meta
+      name="twitter:image"
+      content="https://energymetricsafrica.com/assets/logo-white.png"
+    />
+    <title>Free Energy Assessment | Energy Metrics Africa</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="../assets/logo-white.png" as="image" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/energy-audit.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav__logo"
+          ><img
+            src="../assets/logo-white.png"
+            alt="Energy Metrics Africa Limited"
+            width="160"
+            height="44"
+        /></a>
+        <ul class="nav__links" role="list">
+          <li>
+            <a href="/" class="nav__link" data-nav="/">Home</a>
+          </li>
+          <li>
+            <a href="/about" class="nav__link" data-nav="/about">About</a>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="/services" class="nav__link" data-nav="/services"
+              >Services<svg
+                class="nav__caret"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              ><path d="m6 9 6 6 6-6" /></svg
+            ></a>
+            <div class="nav__dropdown">
+              <a
+                href="/services/off-grid-solar-hybrid-systems/"
+                class="nav__dropdown-link"
+                >Off-Grid Solar Hybrid Systems</a
+              >
+              <a
+                href="/services/commercial-energy-installations/"
+                class="nav__dropdown-link"
+                >Commercial Energy Installations</a
+              >
+              <a
+                href="/services/community-mini-grid-development/"
+                class="nav__dropdown-link"
+                >Community Mini-Grid Development</a
+              >
+              <a
+                href="/services/energy-audit-analytics/"
+                class="nav__dropdown-link"
+                >Energy Audit &amp; Analytics</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/projects" class="nav__link" data-nav="/projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="/contact" class="nav__link--cta" data-nav="/contact"
+              >Get In Touch</a
+            >
+          </li>
+        </ul>
+        <button
+          class="nav__hamburger"
+          id="hamburger"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div
+        class="nav__drawer"
+        id="nav-drawer"
+        role="dialog"
+        aria-label="Mobile navigation"
+      >
+        <a href="/" class="nav__drawer-link" data-nav="/">Home</a
+        ><a href="/about" class="nav__drawer-link" data-nav="/about">About</a
+        ><a
+          href="/services"
+          class="nav__drawer-link"
+          data-nav="/services"
+          >Services</a
+        ><a
+          href="/services/off-grid-solar-hybrid-systems/"
+          class="nav__drawer-sublink"
+          >Off-Grid Solar Hybrid Systems</a
+        ><a
+          href="/services/commercial-energy-installations/"
+          class="nav__drawer-sublink"
+          >Commercial Energy Installations</a
+        ><a
+          href="/services/community-mini-grid-development/"
+          class="nav__drawer-sublink"
+          >Community Mini-Grid Development</a
+        ><a
+          href="/services/energy-audit-analytics/"
+          class="nav__drawer-sublink"
+          >Energy Audit &amp; Analytics</a
+        ><a href="/projects" class="nav__drawer-link" data-nav="/projects"
+          >Projects</a
+        ><a href="/contact" class="nav__drawer-cta" data-nav="/contact"
+          >Get In Touch</a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <div class="page-hero">
+        <div class="page-hero__bg" aria-hidden="true"></div>
+        <div class="page-hero__grid" aria-hidden="true"></div>
+        <div class="page-hero__inner">
+          <div class="page-hero__eyebrow">Free Energy Assessment</div>
+          <h1 class="page-hero__title">
+            Find out what your power costs,
+            <span class="grad-text">and what solar could save.</span>
+          </h1>
+          <p class="page-hero__sub">
+            Tell us what you spend on power and which appliances you run. You
+            get your daily load, the solar system that fits it, and how long it
+            takes to pay for itself. It takes about three minutes and you
+            don&rsquo;t need to sign up.
+          </p>
+        </div>
+      </div>
+
+      <section class="section section--navy ea" aria-label="Energy assessment">
+        <div class="container ea__wrap">
+          <!-- ── FORM ─────────────────────────────────────── -->
+          <form id="eaForm" class="ea-form" novalidate>
+            <fieldset class="ea-card reveal">
+              <legend class="ea-card__head">
+                <span class="ea-card__num" aria-hidden="true">01</span>
+                <span>
+                  <span class="ea-card__title">Your building</span>
+                  <span class="ea-card__sub">Who the report is for and where</span>
+                </span>
+              </legend>
+              <div class="ea-grid">
+                <div class="ea-field ea-field--full">
+                  <label class="ea-label" for="eaName"
+                    >Business or home name
+                    <span class="ea-opt">(optional)</span></label
+                  >
+                  <input
+                    class="ea-input"
+                    type="text"
+                    id="eaName"
+                    maxlength="80"
+                    placeholder="e.g. Adeyemi Pharmacy, Ikeja"
+                  />
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaSector">Type of building</label>
+                  <select class="ea-input" id="eaSector">
+                    <option value="">Select one</option>
+                    <option>Home</option>
+                    <option>Healthcare / Pharmacy</option>
+                    <option>Retail / Supermarket</option>
+                    <option>School</option>
+                    <option>Office</option>
+                    <option>Factory / Light industry</option>
+                    <option>Hotel / Hospitality</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="ea-field" id="eaHomeTypeWrap" hidden>
+                  <label class="ea-label" for="eaHomeType">Type of home</label>
+                  <select class="ea-input" id="eaHomeType">
+                    <option value="">Select one</option>
+                    <option>Duplex</option>
+                    <option>Semi-detached house</option>
+                    <option>Bungalow</option>
+                    <option>Flat / Apartment</option>
+                    <option>Self-contained / Room and parlour</option>
+                    <option>Terrace house</option>
+                    <option>Boys quarters (BQ)</option>
+                    <option>Penthouse</option>
+                    <option>Estate / Several units</option>
+                  </select>
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaState">State</label>
+                  <select class="ea-input" id="eaState"></select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="ea-card reveal">
+              <legend class="ea-card__head">
+                <span class="ea-card__num" aria-hidden="true">02</span>
+                <span>
+                  <span class="ea-card__title">Your power today</span>
+                  <span class="ea-card__sub"
+                    >Rough figures are fine. Leave out what you don&rsquo;t know.</span
+                  >
+                </span>
+              </legend>
+              <div class="ea-grid ea-grid--3">
+                <div class="ea-field">
+                  <label class="ea-label" for="eaGridHours"
+                    >Grid power per day <span class="ea-unit">hours</span></label
+                  >
+                  <input class="ea-input" type="number" id="eaGridHours" min="0" max="24" inputmode="decimal" placeholder="e.g. 8" />
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaTariff"
+                    >Grid tariff <span class="ea-unit">&#8358;/kWh</span></label
+                  >
+                  <input class="ea-input" type="number" id="eaTariff" min="0" inputmode="decimal" placeholder="e.g. 209" />
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaGridBill"
+                    >Monthly grid bill <span class="ea-unit">&#8358;</span></label
+                  >
+                  <input class="ea-input" type="number" id="eaGridBill" min="0" inputmode="decimal" placeholder="e.g. 45000" />
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaGenHours"
+                    >Generator per day <span class="ea-unit">hours</span></label
+                  >
+                  <input class="ea-input" type="number" id="eaGenHours" min="0" max="24" inputmode="decimal" placeholder="e.g. 10" />
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaGenSize"
+                    >Generator size <span class="ea-unit">kVA</span></label
+                  >
+                  <input class="ea-input" type="number" id="eaGenSize" min="0" inputmode="decimal" placeholder="e.g. 10" />
+                </div>
+                <div class="ea-field">
+                  <label class="ea-label" for="eaFuel"
+                    >Monthly diesel / petrol <span class="ea-unit">&#8358;</span></label
+                  >
+                  <input class="ea-input" type="number" id="eaFuel" min="0" inputmode="decimal" placeholder="e.g. 180000" />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="ea-card reveal">
+              <legend class="ea-card__head">
+                <span class="ea-card__num" aria-hidden="true">03</span>
+                <span>
+                  <span class="ea-card__title">Your appliances</span>
+                  <span class="ea-card__sub"
+                    >We filled in a typical setup. Change it to match yours.</span
+                  >
+                </span>
+              </legend>
+              <div class="ea-apps" role="table" aria-label="Appliances">
+                <div class="ea-apps__head" role="row">
+                  <span role="columnheader">Appliance</span>
+                  <span role="columnheader">How many</span>
+                  <span role="columnheader">Power</span>
+                  <span role="columnheader">Hours a day</span>
+                  <span role="columnheader"><span class="sr-only">Remove</span></span>
+                </div>
+                <div id="eaAppRows" role="rowgroup"></div>
+              </div>
+              <button type="button" class="ea-add" id="eaAddRow">
+                + Add another appliance
+              </button>
+            </fieldset>
+
+            <div class="ea-error" id="eaFormError" role="alert" hidden></div>
+
+            <div class="ea-submit">
+              <button type="submit" class="btn btn--gold">
+                See my energy report &rarr;
+              </button>
+              <p class="ea-note">Free &middot; No sign-up &middot; About 3 minutes</p>
+            </div>
+          </form>
+
+          <!-- ── REPORT ───────────────────────────────────── -->
+          <div id="eaReport" class="ea-report" hidden tabindex="-1" aria-labelledby="eaReportTitle">
+            <div class="ea-report__top">
+              <div>
+                <div class="eyebrow">Your energy report</div>
+                <h2 class="ea-report__name" id="eaReportTitle">&mdash;</h2>
+                <p class="ea-report__meta" id="eaReportMeta"></p>
+              </div>
+              <span class="ea-report__id" id="eaReportId"></span>
+            </div>
+
+            <div class="ea-kpis">
+              <div class="ea-kpi">
+                <p class="ea-kpi__label">Monthly power spend</p>
+                <p class="ea-kpi__val ea-kpi__val--gold" id="eaKpiMonthly">&mdash;</p>
+                <p class="ea-kpi__sub">Grid and fuel together</p>
+              </div>
+              <div class="ea-kpi">
+                <p class="ea-kpi__label">Yearly power spend</p>
+                <p class="ea-kpi__val" id="eaKpiYearly">&mdash;</p>
+                <p class="ea-kpi__sub">If nothing changes</p>
+              </div>
+              <div class="ea-kpi">
+                <p class="ea-kpi__label">Daily energy use</p>
+                <p class="ea-kpi__val" id="eaKpiLoad">&mdash;</p>
+                <p class="ea-kpi__sub">From your appliance list</p>
+              </div>
+            </div>
+
+            <div class="ea-alert" id="eaAlert" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+              <div>
+                <p class="ea-alert__title">Most of your money goes on fuel</p>
+                <p class="ea-alert__text" id="eaAlertText"></p>
+              </div>
+            </div>
+
+            <div class="ea-split">
+              <div class="ea-card ea-card--flat">
+                <h3 class="ea-sec-title">Where your energy goes</h3>
+                <div id="eaBreakdown"></div>
+              </div>
+              <div class="ea-card ea-card--flat">
+                <h3 class="ea-sec-title">What you spend each month</h3>
+                <div id="eaCosts"></div>
+              </div>
+            </div>
+
+            <div class="ea-rec">
+              <div class="eyebrow">Recommended system</div>
+              <h3 class="ea-rec__title">A solar hybrid system sized for your load</h3>
+              <p class="ea-rec__sub">Solar panels, lithium (LiFePO4) batteries and a hybrid inverter that still works with the grid.</p>
+              <div class="ea-specs">
+                <div class="ea-spec">
+                  <p class="ea-spec__label">Solar panels</p>
+                  <p class="ea-spec__val"><span id="eaPv">&mdash;</span> <span class="ea-spec__unit">kWp</span></p>
+                </div>
+                <div class="ea-spec">
+                  <p class="ea-spec__label">Battery storage</p>
+                  <p class="ea-spec__val"><span id="eaBat">&mdash;</span> <span class="ea-spec__unit">kWh</span></p>
+                </div>
+                <div class="ea-spec">
+                  <p class="ea-spec__label">Inverter</p>
+                  <p class="ea-spec__val"><span id="eaInv">&mdash;</span> <span class="ea-spec__unit">kVA</span></p>
+                </div>
+              </div>
+              <h4 class="ea-sec-title ea-sec-title--light">What you could save</h4>
+              <div class="ea-roi">
+                <div class="ea-roi__cell">
+                  <p class="ea-roi__label">Each month</p>
+                  <p class="ea-roi__val" id="eaSaveMonthly">&mdash;</p>
+                </div>
+                <div class="ea-roi__cell">
+                  <p class="ea-roi__label">Each year</p>
+                  <p class="ea-roi__val" id="eaSaveYearly">&mdash;</p>
+                </div>
+                <div class="ea-roi__cell">
+                  <p class="ea-roi__label">Pays for itself in</p>
+                  <p class="ea-roi__val" id="eaPayback">&mdash;</p>
+                </div>
+              </div>
+              <p class="ea-rec__note">
+                These savings assume solar replaces about 70% of your grid and
+                fuel spend. Our engineers confirm the real figure and the price
+                after a site visit.
+              </p>
+            </div>
+
+            <div class="ea-card ea-card--flat">
+              <h3 class="ea-sec-title">What happens next</h3>
+              <ol class="ea-steps">
+                <li>
+                  <p class="ea-steps__title">Site visit</p>
+                  <p class="ea-steps__text">An EMA engineer visits to check your load, your wiring and the best place for the panels.</p>
+                </li>
+                <li>
+                  <p class="ea-steps__title">Written proposal</p>
+                  <p class="ea-steps__text">You get a full list of equipment, an installation timeline and a written quote.</p>
+                </li>
+                <li>
+                  <p class="ea-steps__title">Installation and handover</p>
+                  <p class="ea-steps__text">Our team installs and tests the system, then hands over the warranty papers.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="btn-group ea-actions">
+              <button type="button" class="btn btn--gold" id="eaBookOpen">
+                Request a site visit &rarr;
+              </button>
+              <button type="button" class="btn btn--outline-white" id="eaPdf">
+                Download PDF report
+              </button>
+              <button type="button" class="btn btn--outline-gold" id="eaRestart">
+                Change my answers
+              </button>
+            </div>
+            <p class="ea-error" id="eaPdfError" role="alert" hidden>
+              Your browser blocked the report window. Allow pop-ups for this
+              site and try again.
+            </p>
+
+            <p class="ea-disclaimer">
+              This report is an estimate. Final system size and price depend on
+              a site visit by an engineer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SITE VISIT DIALOG ────────────────────────────── -->
+      <dialog class="ea-dialog" id="eaBook" aria-labelledby="eaBookTitle">
+        <button type="button" class="ea-dialog__close" id="eaBookClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+        <div id="eaBookBody">
+          <div class="eyebrow">Free site visit</div>
+          <h2 class="ea-dialog__title" id="eaBookTitle">Request a site visit</h2>
+          <p class="ea-dialog__sub">
+            An engineer visits to check your load and confirm the system size.
+            Your report figures come with this request, so you don&rsquo;t need
+            to repeat them.
+          </p>
+          <form id="eaBookForm" action="https://formspree.io/f/maeyboaq" method="POST" novalidate>
+            <div class="form-trap" aria-hidden="true">
+              <label for="eaGotcha">Leave this empty</label>
+              <input type="text" id="eaGotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="ea-grid">
+              <div class="ea-field ea-field--full">
+                <label class="ea-label" for="bkName">Full name</label>
+                <input class="ea-input" type="text" id="bkName" autocomplete="name" required />
+              </div>
+              <div class="ea-field">
+                <label class="ea-label" for="bkPhone">Phone number</label>
+                <input class="ea-input" type="tel" id="bkPhone" autocomplete="tel" placeholder="e.g. 0801 234 5678" required />
+              </div>
+              <div class="ea-field">
+                <label class="ea-label" for="bkEmail">Email <span class="ea-opt">(optional)</span></label>
+                <input class="ea-input" type="email" id="bkEmail" autocomplete="email" />
+              </div>
+              <div class="ea-field ea-field--full">
+                <label class="ea-label" for="bkAddress">Address of the building</label>
+                <input class="ea-input" type="text" id="bkAddress" autocomplete="street-address" placeholder="Street, area, city" required />
+              </div>
+              <div class="ea-field ea-field--full">
+                <label class="ea-label" for="bkDate">Preferred visit date</label>
+                <input class="ea-input" type="date" id="bkDate" required />
+              </div>
+              <div class="ea-field ea-field--full">
+                <label class="ea-label" for="bkNotes">Anything else? <span class="ea-opt">(optional)</span></label>
+                <textarea class="ea-input ea-textarea" id="bkNotes" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="ea-error" id="eaBookError" role="alert" hidden></div>
+            <button type="submit" class="btn btn--gold ea-dialog__submit" id="eaBookSubmit">
+              Send request &rarr;
+            </button>
+          </form>
+        </div>
+        <div class="ea-dialog__done" id="eaBookDone" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+          <h2 class="ea-dialog__title">Request sent</h2>
+          <p class="ea-dialog__sub">
+            Thank you. Our team will call you within 24 hours to confirm the
+            visit date.
+          </p>
+          <button type="button" class="btn btn--outline-white" id="eaBookDoneClose">Close</button>
+        </div>
+      </dialog>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__brand-logo">
+              <img
+                src="../assets/logo-white.png"
+                alt="Energy Metrics Africa"
+                width="140"
+                height="38"
+              />
+            </div>
+            <p class="footer__brand-desc">
+              An indigenous Nigerian energy services company contributing to the
+              energy value chain through on-grid, off-grid, and mini-grid
+              renewable energy integration.
+            </p>
+            <div class="footer__socials">
+              <a
+                href="https://www.instagram.com/energymetrics/"
+                class="footer__social"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M16.5 7.5v.01"/></svg></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61573448944891"
+                class="footer__social"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H7"/></svg></a>
+              <a
+                href="https://x.com/emetricsafrica"
+                class="footer__social"
+                aria-label="Twitter/X"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4l11.733 16H20L8.267 4z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg></a>
+              <a
+                href="https://www.linkedin.com/in/energy-metrics-617b68352/"
+                class="footer__social"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></svg></a>
+              <a
+                href="https://wa.me/2348146534567"
+                class="footer__social"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/about#mission">Mission &amp; Vision</a></li>
+              <li><a href="/about#values">Core Values</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="/services">Solar Hybrid Systems</a></li>
+              <li><a href="/services">Commercial Installations</a></li>
+              <li><a href="/services">Community Mini-Grids</a></li>
+              <li><a href="/services">Energy Audit &amp; Analytics</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h5>Contact</h5>
+            <ul>
+              <li>
+                <a href="mailto:info@energymetricsafrica.com"
+                  >info@energymetricsafrica.com</a
+                >
+              </li>
+              <li>
+                <a href="https://wa.me/2348146534567" target="_blank" rel="noopener noreferrer"
+                  >WhatsApp: 0814 653 4567</a
+                >
+              </li>
+              <li><a href="/contact">Lagos, Nigeria</a></li>
+              <li><a href="/contact">Partner With Us</a></li>
+              <li><a href="/contact">Investor Relations</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            &copy; 2026 <span>Energy Metrics Africa Limited</span>. All rights
+            reserved.
+          </p>
+          <p class="footer__tagline">Transforming Energy Into Value</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/energy-audit.js" defer></script>
+  </body>
+</html>
